@@ -61,7 +61,7 @@ $(function() {
         }
         $.post('/api/reguser', data, function(res) {
             if (res.status !== 0) {
-                return console.log(res.message);
+                return layer.msg(res.message);
 
             }
             // return console.log(res.message)
