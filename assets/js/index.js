@@ -61,14 +61,22 @@ function getUserInfo() {
 }
 //渲染用户头像
 function renderAvatar(user) {
-    //获取用户的name信息
-    var name = user.username || user.nickname
+    //获取用户的name信息,优先获取昵称
+    var name = user.nickname || user.username
         //渲染欢迎文字
     $('.welcome').html('欢迎&nbsp;&nbsp;' + name)
     if (user.user_pic !== null) {
-        $('.layui-nav-img').attr('src', user.user_pic).show()
+        console.log('有');
+
+        // $('.layui-nav-img').attr('src', user.user_pic).show()
+        // $('.text-avatar').hide()
+        $('.layui-nav-img')
+            .attr('src', user.user_pic)
+            .show()
         $('.text-avatar').hide()
+    } else {
+        $('.layui-nav-img').hide()
+        $('.text-avatar').html(name[0].toUpperCase()).show()
     }
-    $('.layui-nav-img').hide()
-    $('.text-avatar').html(name[0].toUpperCase()).show()
+
 }
