@@ -1,0 +1,30 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 15px;
+    background-color: #f2f3f5;
+}
+
+#addCate {
+    float: right;
+    margin: 6px;
+    padding: 0 10px;
+    font-size: 12px;
+    width: 68px;
+    line-height: 30px;
+    height: 30px;
+}
+
+#artDel {
+    margin-left: 10px !important;
+}
+
+#form-add,
+#form-edit {
+    margin-top: 40px;
+    margin-right: 60px;
+}
